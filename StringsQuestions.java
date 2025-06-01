@@ -140,6 +140,19 @@ public class StringsQuestions {
         System.out.println("consonants : " +  consonants);
     }
 
+    public static void uniqueChar(String str){
+
+        boolean [] unique = new boolean[126];
+
+        for (char c : str.toCharArray()) {
+            if (!unique[c]) {
+                System.out.print(c);
+                unique[c] = true;
+            }
+        }
+        System.out.println();
+    }
+
   
   
   
@@ -193,6 +206,15 @@ public class StringsQuestions {
         countVowelsAndConsonants(str1);
         countVowelsAndConsonants(str2);
         System.out.println();
+
+        System.out.println("\033[0;1m" +" print unqiue characters  " + "\033[0;0m");
+        uniqueChar(str);
+        uniqueChar(str1);
+        uniqueChar(str2);
+
+
+
+
 
 
 
