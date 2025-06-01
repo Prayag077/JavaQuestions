@@ -122,7 +122,7 @@ public class Basic {
             result+= digit;
             a = a / 10;
         }
-        System.out.println("sum of digits o f" + original + " : " + result  );
+        System.out.println("sum of digits of " + original + " : " + result  );
     }
 
     public static void main(String[] args) {
@@ -186,12 +186,7 @@ public class Basic {
         CalculateSum(e);
         CalculateSum(d);
         System.out.println();
-
-
-
        }
-
-        
     }
 
 

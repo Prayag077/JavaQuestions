@@ -2,7 +2,7 @@
 
 import java.util.HashSet;
 
-public class recursion {
+public class Recursion {
     
      //RECURSION QUESTIONS 
 

@@ -1,5 +1,5 @@
 
-class pattern {
+class Pattern {
 
     public static void solidRectangle(int a, int b){
       System.out.println("\033[0;1m" +"SOLID RECTANGLE" + "\033[0;0m");
