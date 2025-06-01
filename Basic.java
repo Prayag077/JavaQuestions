@@ -90,6 +90,40 @@ public class Basic {
         }
     }
 
+    public static void numberOfDigits(int a ){
+        int digits = String.valueOf(a).length();
+        System.out.println("no. of digits in " + a + " : "+digits);
+    }
+
+    public static void palindrome(int a){
+
+        int original = a;
+        int rev = 0;
+
+        while (a > 0) {
+            int digit = a % 10;
+            rev = rev*10 + digit;
+            a = a / 10;
+        }
+
+        if (original==rev) {
+            System.out.println(original + " : Palindrome");
+        } else {
+            System.out.println(original + " : not a Palindrome");
+        }        
+    }
+
+
+    public static void CalculateSum(int a){
+        int original = a;
+        int result = 0;
+        while (a > 0) {
+            int digit = a % 10;
+            result+= digit;
+            a = a / 10;
+        }
+        System.out.println("sum of digits o f" + original + " : " + result  );
+    }
 
     public static void main(String[] args) {
         // try(Scanner sc = new Scanner(System.in)){
@@ -102,6 +136,7 @@ public class Basic {
             int b = 6;
             int c = 12345;
             int d = 153;
+            int e = 123321;
       
 
         System.out.println("\033[0;1m" +"Check " +  a + " is  Odd or Even" + "\033[0;0m");
@@ -136,7 +171,22 @@ public class Basic {
          armstrong(c);
         System.out.println();
 
-        
+         System.out.println("\033[0;1m" +"find number of digits" + "\033[0;0m");
+        numberOfDigits(d);
+        numberOfDigits(c);
+        System.out.println();
+
+        System.out.println("\033[0;1m" +"Check Palindrome" + "\033[0;0m");
+        palindrome(e);
+        palindrome(d);
+        System.out.println();
+
+
+        System.out.println("\033[0;1m" +"Calculate Sum" + "\033[0;0m");
+        CalculateSum(e);
+        CalculateSum(d);
+        System.out.println();
+
 
 
        }
