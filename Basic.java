@@ -1,6 +1,4 @@
 
-import java.util.Scanner;
-
 public class Basic {
     public static void oddEven (int a){
         if (a % 2 == 0) {
@@ -61,9 +59,40 @@ public class Basic {
         System.out.println("Factorial of " + a + " is : " + result);
     }
 
+     public static void reverseNumber(int a){
+        
+        int result = 0;
+
+        while (a > 0) {
+            int digit = a % 10;
+            result = result*10 + digit;
+            a = a / 10;
+        }
+        System.out.println("Reverse Number : " + result );
+     }
+
+     public static void armstrong(int a){
+
+        int original = a;
+        int digits = String.valueOf(a).length();
+        int sum = 0;
+
+        while (a > 0) { 
+            int digit = a % 10;
+            sum += Math.pow(digit, digits);
+            a = a / 10; 
+        }
+
+        if (original == sum) {
+            System.out.println(original +  " : armstrong Number");
+        } else {
+            System.out.println(original +  " : not an armstrong Number");
+        }
+    }
+
 
     public static void main(String[] args) {
-        try(Scanner sc = new Scanner(System.in)){
+        // try(Scanner sc = new Scanner(System.in)){
             // System.out.print("\033[0;1m" +"Enter a Number \"a\" : " + "\033[0;0m");
             // int a = sc.nextInt();
             // System.out.println();
@@ -71,6 +100,8 @@ public class Basic {
             // int b = sc.nextInt();
             int a = 5;
             int b = 6;
+            int c = 12345;
+            int d = 153;
       
 
         System.out.println("\033[0;1m" +"Check " +  a + " is  Odd or Even" + "\033[0;0m");
@@ -94,7 +125,23 @@ public class Basic {
         System.out.println("\033[0;1m" +"Factoiral of a" + "\033[0;0m");
         factorial(a);
         System.out.println();
-          }
+
+
+        System.out.println("\033[0;1m" +"Reverse Number  c" + "\033[0;0m");
+        reverseNumber(c);
+        System.out.println();
+
+         System.out.println("\033[0;1m" +"check id \"d\" is armstrong number" + "\033[0;0m");
+         armstrong(d);
+         armstrong(c);
+        System.out.println();
+
+        
+
+
+       }
+
+        
     }
-}
+
 

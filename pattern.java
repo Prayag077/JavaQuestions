@@ -1,5 +1,3 @@
-package questions;
-
 
 class pattern {
 
@@ -109,8 +107,9 @@ class pattern {
           } 
           
           System.out.println();
-      }
+      } 
      }
+
     
      public static void butterfly(int a ){
       
