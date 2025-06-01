@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Basic {
@@ -63,11 +64,13 @@ public class Basic {
 
     public static void main(String[] args) {
         try(Scanner sc = new Scanner(System.in)){
-            System.out.print("\033[0;1m" +"Enter a Number \"a\" : " + "\033[0;0m");
-            int a = sc.nextInt();
-            System.out.println();
-            System.out.print("\033[0;1m" +"Enter a Number \"b\" : " + "\033[0;0m");
-            int b = sc.nextInt();
+            // System.out.print("\033[0;1m" +"Enter a Number \"a\" : " + "\033[0;0m");
+            // int a = sc.nextInt();
+            // System.out.println();
+            // System.out.print("\033[0;1m" +"Enter a Number \"b\" : " + "\033[0;0m");
+            // int b = sc.nextInt();
+            int a = 5;
+            int b = 6;
       
 
         System.out.println("\033[0;1m" +"Check " +  a + " is  Odd or Even" + "\033[0;0m");
@@ -94,3 +97,4 @@ public class Basic {
           }
     }
 }
+
