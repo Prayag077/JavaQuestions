@@ -279,7 +279,9 @@ public class recursion {
     System.out.println("\033[0;1m" +"Recursive way to print permutations of a String" + "\033[0;0m"); 
     permutation(str2, " ");
     System.out.println();
+
+    System.out.println();
      }
 
-
+   
 }

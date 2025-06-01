@@ -271,6 +271,9 @@ class pattern {
 
       diamondPattern(a);
       System.out.println();
+        //checking git hub is working or not second time
+      
      }
-    
+
+   
 }
