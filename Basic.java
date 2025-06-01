@@ -125,6 +125,14 @@ public class Basic {
         System.out.println("sum of digits of " + original + " : " + result  );
     }
 
+    public static void leapYearCheck(int a){
+        if ((a % 4 == 0 && a % 100 !=0) || a % 400 == 0 ) {
+            System.out.println(a + " is a Leap Year");
+        } else {
+            System.out.println(a + " is not a Leap Year");
+        }
+
+    }
     public static void main(String[] args) {
         // try(Scanner sc = new Scanner(System.in)){
             // System.out.print("\033[0;1m" +"Enter a Number \"a\" : " + "\033[0;0m");
@@ -186,7 +194,15 @@ public class Basic {
         CalculateSum(e);
         CalculateSum(d);
         System.out.println();
+
+        System.out.println("\033[0;1m" + "Leap Year Check"  + "\033[0;0m");
+        leapYearCheck(2020);
+        leapYearCheck(2014);
+        leapYearCheck(2025);
        }
+
+       
+
     }
 
 
