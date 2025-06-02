@@ -1,4 +1,6 @@
+
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Set;
 
 public class StringsQuestions {
@@ -153,6 +155,159 @@ public class StringsQuestions {
         System.out.println();
     }
 
+
+    public static void printEvenIndex(String str){
+
+        for (int i = 0; i < str.length(); i++) {
+            if (i % 2 == 0) {
+                System.out.print(str.charAt(i));
+            }
+        }
+    }
+
+    public static void removeSpace(String str){
+
+        StringBuilder nstr = new StringBuilder();
+
+        for (char c : str.toCharArray()) {
+            if (c !=' ') {
+                nstr.append(c);
+            }
+        }
+        System.out.println(nstr.toString());
+    }
+
+    public static void eachLetterTwice(String str){
+
+        StringBuilder nstr = new StringBuilder();
+
+        for (char c : str.toCharArray()) {
+                nstr.append(c).append(c);
+            
+        }
+        System.out.println(nstr.toString());
+    }
+
+    public static void swapTwoString(String str1 , String str2){
+
+        System.out.println("Str 1 Before Swapping : " + str1);
+        System.out.println("Str 2 Before Swapping : " + str2);
+        System.out.println();
+        str1 = str1 + str2;
+        str2= str1.substring(0,str1.length() - str2.length());
+        str1 = str1.substring(str2.length());
+
+        System.out.println("Str 1 After Swapping : " + str1);
+        System.out.println("Str 2 After Swapping : " + str2);
+    }
+
+    public static void countChar(String str){
+
+        int count = 1;
+        StringBuilder nstr = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            
+            if ( i+1 < str.length() && str.charAt(i) == str.charAt(i+1)) {
+                count++;
+            } else {
+                nstr.append(str.charAt(i)).append(count);
+                count = 1;
+            }
+        }
+        System.out.println(nstr.toString());
+    }
+
+    public static void upperLower(String str){
+
+        StringBuilder lower = new StringBuilder();
+        StringBuilder upper = new StringBuilder();
+
+        for (char c : str.toCharArray()) {
+            if (Character.isLowerCase(c)) {
+                lower.append(c);
+            } else {
+                upper.append(c);
+            }
+        }
+
+        System.out.println("Lower case : " + lower);
+        System.out.println("Upper case : " + upper);
+    }
+
+    public static void digitLetters(String str){
+
+        StringBuilder digit = new StringBuilder();
+        StringBuilder letter = new StringBuilder();
+
+        for (char c : str.toCharArray()) {
+            if (Character.isDigit(c)) {
+                digit.append(c);
+            } else {
+                letter.append(c);
+            }
+        }
+
+        System.out.println("Lower case : " + digit);
+        System.out.println("Upper case : " + letter);
+    }
+
+    public static void digitLettersInSameLine(String str){
+
+        StringBuilder digit = new StringBuilder();
+        StringBuilder letter = new StringBuilder();
+
+        for (char c : str.toCharArray()) {
+            if (Character.isDigit(c)) {
+                digit.append(c);
+            } else {
+                letter.append(c);
+            }
+        }
+
+        System.out.println("RESULT : " + digit.append(letter));
+        
+    }
+
+
+    public static void format(String str){
+
+        System.out.println("BEFORE FORMAT : "+ str);
+        long number = Long.parseLong(str);
+        
+            String format = String.format("%011d", number);
+
+            System.out.println("AFTER FORMAT : " +format);
+    }
+
+    public static void longestWithoutRepeatingChar(String str){
+        int start = 0;
+        int end = 0;
+        int minIndex = 0;
+
+        HashSet<Character> set = new HashSet<>();
+        
+
+        for (int i = 0; i < str.length(); i++) {
+            
+            while (end < str.length()) {
+                char c = str.charAt(end);
+                if (!set.contains(c)) {
+                    set.add(c);
+                    minIndex = Math.max(minIndex, end - start + 1);
+                    end++;
+                } else {
+                    set.remove(str.charAt(start));
+                    start++;
+                } 
+            }
+        }
+        System.out.println("MIN INDEX : " +minIndex);
+    }
+
+
+
+
   
   
   
@@ -162,6 +317,7 @@ public class StringsQuestions {
         String str = "shree radhe shree radhe shree radhe shree radhe radhe shree radhe";
         String str1 = "MALAYALAM";
         String str2 = "MALYAAMLA";
+        String str3 = "RADHE radhe";
 
         System.out.println("String : " + str);
         System.out.println();
@@ -211,7 +367,61 @@ public class StringsQuestions {
         uniqueChar(str);
         uniqueChar(str1);
         uniqueChar(str2);
-        //gitCheck
+        System.out.println();
+
+        System.out.println("\033[0;1m" +" Print Even Index Char " + "\033[0;0m");
+        printEvenIndex(str);
+        System.out.println();
+        System.out.println();
+
+        System.out.println("\033[0;1m" +" Remove space from a given string " + "\033[0;0m");
+        removeSpace(str);
+        System.out.println();
+
+        System.out.println("\033[0;1m" +" Print each Letter Twice " + "\033[0;0m");
+        eachLetterTwice(str);
+        System.out.println();
+
+        System.out.println("\033[0;1m" +" Swap 2 string without using third variable " + "\033[0;0m");
+        swapTwoString(str, str1);
+        System.out.println();
+
+        System.out.println("\033[0;1m" +" count duble character in a row " + "\033[0;0m");
+        countChar(str);
+        System.out.println();
+
+        System.out.println("\033[0;1m" +" extract lower and upper case " + "\033[0;0m");
+        upperLower(str3);
+        System.out.println();
+
+        System.out.println("\033[0;1m" +" extract digits and letters " + "\033[0;0m");
+        digitLetters("FJAIJ0F93J9JF4N9N2F9");
+        System.out.println();
+
+        System.out.println("\033[0;1m" +"move all letters in the end"+ "\033[0;0m");
+        digitLettersInSameLine("FJAIJF93J9JF4N9N2F9");
+        System.out.println();
+
+        System.out.println("\033[0;1m" +"format String number"+ "\033[0;0m");
+        format("3240012");
+        System.out.println();
+
+
+        System.out.println("\033[0;1m" +"find longest without repeating character"+ "\033[0;0m");
+        longestWithoutRepeatingChar(str);
+
+
+
+        
+
+
+
+
+
+
+
+
+
 
 
 
