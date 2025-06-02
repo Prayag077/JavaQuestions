@@ -1,6 +1,7 @@
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class StringsQuestions {
@@ -43,6 +44,13 @@ public class StringsQuestions {
             }
         }
 
+        for (Map.Entry<Character, Integer> en : dupeChar.entrySet()) {
+            if (en.getValue()>1) {
+                System.out.println(en.getKey() + " : " + en.getValue());
+            }
+            
+        }
+        System.out.println();
         Set<Character> set = dupeChar.keySet();
 
         for (char c : set) {
@@ -410,9 +418,6 @@ public class StringsQuestions {
         System.out.println("\033[0;1m" +"find longest without repeating character"+ "\033[0;0m");
         longestWithoutRepeatingChar(str);
         System.out.println();
-        
-        
-
 
 
 
