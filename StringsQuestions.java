@@ -409,6 +409,10 @@ public class StringsQuestions {
 
         System.out.println("\033[0;1m" +"find longest without repeating character"+ "\033[0;0m");
         longestWithoutRepeatingChar(str);
+        System.out.println();
+        
+        
+
 
 
 
