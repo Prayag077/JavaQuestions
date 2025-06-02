@@ -52,7 +52,7 @@ public class StringsQuestions {
         }
         System.out.println();
         Set<Character> set = dupeChar.keySet();
-
+    //ANOTHER WAY
         for (char c : set) {
             if (dupeChar.get(c)>1 ) {
                 System.out.println(c + " : " + dupeChar.get(c));

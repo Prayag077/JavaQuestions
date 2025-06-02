@@ -229,6 +229,23 @@ public class Arrays {
             System.out.println();
         }
 
+
+    public static void reverseAnArray(int [] arr){
+        int first = 0;
+        int last = arr.length-1;
+
+        while (first < last) {
+            int temp = arr[first];
+            arr[first] = arr[last];
+            arr[last] = temp;
+
+            first++;
+            last--;
+        }
+
+        printArr(arr);
+    }   
+
         
 
         
@@ -326,5 +343,8 @@ public class Arrays {
         System.out.println("\033[0;1m" + "Java program – input array was given [ 1,1,2,2,3,4,5,5,6,6], Output [3,4]" + "\033[0;1m");
         int [] arr4 = {1,1,2,2,3,4,5,5,6,6};
         findNonRepeatedElements(arr4);
+
+        System.out.println("\033[0;1m" + "Reverse an Array" + "\033[0;1m");
+        reverseAnArray(arr4);
     }
 }
