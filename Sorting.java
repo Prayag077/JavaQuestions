@@ -52,6 +52,7 @@ public class Sorting {
             int j = i-1;
             while (current < arr[j] ) {
                 arr[j+1] = arr[j];
+                j--;
             }
             arr[j+1] = current;
         }
